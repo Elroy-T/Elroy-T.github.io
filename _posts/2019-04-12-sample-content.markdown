@@ -20,63 +20,62 @@ print_hi('Tom')
 
 
 
-```
 
 
 
-<head>
-    <meta charset="utf-8">
-    <title></title>
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src="https://d3js.org/d3-color.v1.min.js"></script>
-    <style>
-        .axis path,
-        .axis line{
-            fill: none;
-            stroke: black;
-            shape-rendering: crispEdges;
-        }
-        .axis text{
-            font-family: sans-serif;
-            font-size: 11px;
-        }
-        svg {
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-        }
 
-        .bar.right {
-            fill: steelblue;
-        }
 
-        .bar.left {
-            fill: brown;
-        }
+  
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="https://d3js.org/d3-color.v1.min.js"></script>
+<style>
+    .axis path,
+    .axis line{
+        fill: none;
+        stroke: black;
+        shape-rendering: crispEdges;
+    }
+    .axis text{
+        font-family: sans-serif;
+        font-size: 11px;
+    }
+    svg {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
 
-        .axis text {
-            font: 10px sans-serif;
-        }
+    .bar.right {
+        fill: steelblue;
+    }
 
-        .axis path,
-        .axis line {
-            fill: none;
-            stroke: #000;
-            shape-rendering: crispEdges;
-        }
+    .bar.left {
+        fill: brown;
+    }
 
-        .grid .tick {
-            stroke: #FFF;
-            opacity: 0.7;
-            stroke-width: 0.5;
-        }
+    .axis text {
+        font: 10px sans-serif;
+    }
 
-        .grid path {
-            stroke-width: 0;
-        }
-    </style>
-</head>
-<body>
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+    }
+
+    .grid .tick {
+        stroke: #FFF;
+        opacity: 0.7;
+        stroke-width: 0.5;
+    }
+
+    .grid path {
+        stroke-width: 0;
+    }
+</style>
+
+
 <script >
     // 添加SVG画布
     //var dataset =[885,325,285,706 ];//['crew',885], ['first',325], ['second',285], ['third',706]  [885],[325],[285],[706]  885,325,285,706
@@ -155,7 +154,7 @@ print_hi('Tom')
         rightColumn = "people2";
         sextype = "sex";
         yeartype = "year";
-    d3.csv("census2000.csv", function(error, data) {
+    d3.csv("/data/census2000.csv", function(error, data) {
         if (error){
             console.log(error);
             alert("eee");
@@ -340,8 +339,3 @@ print_hi('Tom')
 
 
 
-
-
-</body>
-
-```

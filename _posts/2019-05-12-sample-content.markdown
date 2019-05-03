@@ -1,24 +1,25 @@
 ---
 layout: default
 title:  "Assignment 1 US_population"
-date:   2019-04-12 17:50:00
+date:   2019-04-4 16:50:00
 categories: main
 ---
 
-You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
-To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
+#Gapminder Analysis
 
-Jekyll also offers powerful support for code snippets:
+##Income-Math achievement
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+![Income-Math achievement](https://github.com/static/images/logo-160.png)
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
+As the figure showing, Math achievement is roughly positively correlated with per capita income. That is, countries with higher incomes have a higher probability of obtaining Math achievement, and of course there are a few exceptions, such as Saudi Arabia and Kuwait.
 
-[jekyll-gh]: https://github.com/mojombo/jekyll
-[jekyll]:    http://jekyllrb.com
+
+
+
+##Income-Adults with HIV  
+
+
+
+As the figure showing, Adults with HIV is roughly negatively correlated with per capita income, it means that the higher the income, the less Adults with HIV.
+The red points in the picture are Asian countries, and the blue points are in African countries. It can be seen that the number of Adults with HIV in Asian countries is relatively small, while that in African countries is relatively high.
+I selected several countries from the map and showed them the change in the number of Adults with HIV from 1979 to 2011. It can be seen that the trend of the number of Adults with HIV in these countries is generally the first to grow rapidly and then to be gentle. African countries are growing faster, depending on their living environment, health conditions, and national security.

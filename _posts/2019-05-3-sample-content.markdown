@@ -43,7 +43,7 @@ At last, I spent half a day in hosting the Visualization on GitHub, and I failed
         font-size: 2.75em;
         font-weight: 900;
         color: #000;
-        text-align:center;
+        
     }
     hh3, hh4 {
         line-height: 1em;

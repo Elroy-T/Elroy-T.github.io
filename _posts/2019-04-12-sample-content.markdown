@@ -308,7 +308,9 @@ categories: main
 </script>
 
 
-###Create by Elroy-Tian SDU CS(class 2)
+
+#Create by Elroy-Tian SDU CS(class 2)
+
 The Population Pyramid is a graphic depicting the age and gender distribution of the population in an image similar to the ancient Egyptian pyramids, showing the status of the population and its type of development. The population pyramid can be summarized into three types: (a) Expansion type. The proportion of the young population group is relatively large, gradually decreasing from the lowest age group to the highest age group, and the tower shape is wide and sharp. (b) Stable type. Except for the oldest age group, the other age groups are roughly the same, and the enlargement or reduction is not obvious, and the tower shape is relatively straight. (c) Shrinkage type. The young population group has gradually narrowed down. The proportion of each group in the middle-aged group is larger, and the tower shape is narrower and wider.
 
 After a century of change, the population of the United States has increased significantly and the population structure has changed. However，it is difficult to reflect the changes in demographic structure by observing the data in the CSV file. Therefore, I want to reflect the changes in the population structure of the United States by drawing a pyramid of American population at these two time points.

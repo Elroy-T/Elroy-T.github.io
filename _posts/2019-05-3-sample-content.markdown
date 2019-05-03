@@ -1,24 +1,261 @@
 ---
 layout: default
 title:  "Assignment 1 US_population"
-date:   2019-04-12 17:50:00
+date:   2019-05-3 15:50:00
 categories: main
 ---
 
-You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
-To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
+#Create by Elroy-Tian SDU CS(class 2)
 
-Jekyll also offers powerful support for code snippets:
+Background: As a junior who intends to study abroad, at the beginning, I intend to make a map of the destinations of Chinese students who want to study abroad. So I began to search for data on the Internet, both at home and abroad, and even on the UNESCO website. The UNESCO website has the number of Chinese students studying abroad, but it does not have any data about which countries did they have gone. So I gave up this idea. One evening, I was on my way back to school after having a BBQ with my friends, we happened to be discussing which provinces in China have more than 100 million people, which inspired me. I can turn to build a visualization about which cities around the world with more than 10 million people. This is the origin of my assignment.
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+To draw the distribution of global cities, the first thought is to draw the whole earth. There are many ways of projecting the earth, I use the most common orthographic method to project at first, because this way of projection is easier to understand and can obtain more information. After building the visualization generally, then I add other projection methods to the drop-down box.
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll's GitHub repo][jekyll-gh].
+Interaction techniques: I have used five kinds of interaction techniques in this assignment.(1) The left mouse button can drag the earth, which can let the earth rotate. (2) The pulley can pull the earth closer or farther, which can zoom the earth. (3) When the mouse is placed on a point of a city, it will deepen the color of the current point, at the same time, it will display the name and population of the city. (4) The threshold of displaying cities can be selected from the drop-down menu above (there are 100,000, 500,000, 1,000,000, 10,000,000 thresholds available currently). (5) The projection mode of the earth can be chosen from the menu below too. There are many projection modes in d3 , I chose three of them to be selected here.
 
-[jekyll-gh]: https://github.com/mojombo/jekyll
-[jekyll]:    http://jekyllrb.com
+This assignment took me about 4 - 6 days, most of which were thinking about what visualization to do and searching the data I need.It took about no more than 20 hours to code after deciding the final theme (the final theme was decided one day before the May Day holiday, and I have not seen <Avengers 4> yet...T^T). The most time-consuming part should be the identification of the theme and finding the data I need,  because the data I need about my first theme could not be found.
+
+At last, I spent half a day in hosting the Visualization on GitHub, and I failed...T^T
+(I'm trying to figure out it now, maybe I succeed after several days, maybe not... here is the address of my GitHub.io maybe you can have a try... https://elroy-t.github.io   )
+	
+
+---
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+<script src="https://unpkg.com/d3-tip@0.7.1/index.js"></script>
+<style>
+    body{ text-align:center}
+    #content {
+
+        padding: 60px;
+        width: 1000px;
+
+        margin:0 auto;
+
+
+    }
+    h1, h2 {
+        line-height: 1em;
+        font-size: 2.75em;
+        font-weight: 900;
+        color: #000;
+    }
+    h3, h4 {
+        line-height: 1em;
+        font-size: 1.15em;
+        font-weight: 900;
+        color: #444;
+    }
+    .d3-tip {
+        font-family: sans-serif;
+        font-size: 1.5em;
+        line-height: 1;
+        padding: 7px;
+        background: black;
+        color: lightgray;
+        border-radius: 20px;
+    }
+    circle:hover {
+        stroke: white;
+        stroke-width: 0.5px;
+        fill-opacity: 1;
+    }
+</style>
+
+<div id="content">
+    <h1>Global-Population</h1>
+    <h3>Cities with population more than
+    <select id="test">
+        <option value="0">100,000</option>
+        <option value="1">500,000</option>
+        <option value="2">1,000,000</option>
+        <option value="3">10,000,000</option>
+    </select>
+
+    </h3>
+    <h4>Projection Mode：
+        <select id="test2">
+            <option value="0">orthographic</option>
+            <option value="1">stereographic</option>
+            <option value="2">pseudocylindrical</option>
+
+        </select>
+        <input type="button" value="Show" onclick="fun()">
+    </h4>
+    <svg width="960" height="500" ></svg>
+</div>
+<script>
+    let threshold = 0;
+    let proj = 0;
+    function fun(){
+        threshold = document.getElementById("test").value;
+        proj = document.getElementById("test2").value;
+        switch (proj) {
+            case 0:
+                projection = d3.geoOrthographic();
+                break;
+            case '1':
+                projection = d3.geoStereographic();
+                break;
+            case '2':
+                projection = d3.geoNaturalEarth1();
+                break;
+            default:
+                projection = d3.geoOrthographic();
+                console.log("default");
+        }
+         initialScale = projection.scale();
+         geoPath = d3.geoPath().projection(projection);
+        show();
+    }
+
+
+    const svg = d3.select('svg').style('background-color', '#222');
+    const path = svg.append('path').attr('stroke', 'gray');
+    const citiesG = svg.append('g');
+    var projection = d3.geoOrthographic();
+    var initialScale = projection.scale();
+    var geoPath = d3.geoPath().projection(projection);
+    let moving = false;
+    const rValue = d => d.population;
+    const rScale = d3.scaleSqrt().range([0, 20]);
+
+    var commaFormat = d3.format(',');
+    var tip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-10, 0])
+        .html(d => `${d.name}: ${commaFormat(d.population)}`);
+    svg.call(tip);
+
+
+
+function show() {
+var document = "data/cities100000.csv";
+console.log(threshold);
+    switch(threshold)
+    {
+        case 0:
+            document = "data/cities100000.csv";
+            break;
+        case '1':
+            document = "data/cities500000.csv";
+            break;
+        case '2':
+            document = "data/cities1000000.csv";
+            break;
+        case '3':
+            document = "data/cities10000000.csv";
+            break;
+        default:
+            document = "data/cities100000.csv";
+            console.log("default");
+    }
+console.log(document);
+    d3.queue()
+        .defer(d3.json, 'https://unpkg.com/world-atlas@1/world/110m.json')
+        .defer(d3.json, 'https://unpkg.com/world-atlas@1/world/50m.json')
+        .defer(d3.csv, document)
+        //.defer(d3.csv, "data/cities1000000.csv")
+        // d3.queue()
+        .await((error, world110m, world50m, cities) => {
+            console.log("读取成功！");
+            const countries110m = topojson
+                .feature(world110m, world110m.objects.countries);
+            const countries50m = topojson
+                .feature(world50m, world50m.objects.countries);
+
+
+            cities.forEach(d => {
+                d.latitude = +d.latitude;
+                d.longitude = +d.longitude;
+                d.population = +d.population;
+            });
+
+            rScale.domain([0, d3.max(cities, rValue)]);
+
+            cities.forEach(d => {
+                d.radius = rScale(rValue(d));
+            });
+
+            const render = () => {
+
+                // Render low resolution boundaries when moving,
+                // render high resolution boundaries when stopped.
+                path.attr('d', geoPath(moving ? countries110m : countries50m));
+
+                const point = {
+                    type: 'Point',
+                    coordinates: [0, 0]
+                };
+                cities.forEach(d => {
+                    point.coordinates[0] = d.longitude;
+                    point.coordinates[1] = d.latitude;
+                    d.projected = geoPath(point) ? projection(point.coordinates) : null;
+                });
+
+                const k = Math.sqrt(projection.scale() / 200);
+                const circles = citiesG.selectAll('circle')
+                    .data(cities.filter(d => d.projected));
+                circles.enter().append('circle')
+                    .merge(circles)
+                    .attr('cx', d => d.projected[0])
+                    .attr('cy', d => d.projected[1])
+                    //.attr('fill', 'steelblue')
+                    .attr('fill', 'pink')
+                    .attr('fill-opacity', 0.4)
+                    .attr('r', d => d.radius * k)
+                    .on('mouseover', tip.show)
+                    .on('mouseout', tip.hide);
+
+
+                circles.exit().remove();
+            };
+            render();
+
+            let rotate0, coords0;
+            const coords = () => projection.rotate(rotate0)
+                .invert([d3.event.x, d3.event.y]);
+
+            svg
+                .call(d3.drag()
+                    .on('start', () => {
+                        rotate0 = projection.rotate();
+                        coords0 = coords();
+                        moving = true;
+                    })
+                    .on('drag', () => {
+                        const coords1 = coords();
+                        projection.rotate([
+                            rotate0[0] + coords1[0] - coords0[0],
+                            rotate0[1] + coords1[1] - coords0[1],
+                        ]);
+                        render();
+                    })
+                    .on('end', () => {
+                        moving = false;
+                        render();
+                    })
+                    // Goal: let zoom handle pinch gestures (not working correctly).
+                    .filter(() => !(d3.event.touches && d3.event.touches.length === 2))
+                )
+                .call(d3.zoom()
+                    .on('zoom', () => {
+                        projection.scale(initialScale * d3.event.transform.k);
+                        render();
+                    })
+                    .on('start', () => {
+                        moving = true;
+                    })
+                    .on('end', () => {
+                        moving = false;
+                        render();
+                    })
+                )
+        });
+
+
+}
+
+
+</script>

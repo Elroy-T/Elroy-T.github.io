@@ -69,7 +69,7 @@ At last, I spent half a day in hosting the Visualization on GitHub, and I failed
 </style>
 
 <div id="content1">
-    <h1>Global-Population</h1>
+    <h1>Global cities' population</h1>
     <h3>Cities with population more than
     <select id="test">
         <option value="0">100,000</option>

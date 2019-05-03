@@ -6,8 +6,9 @@ categories: main
 ---
 
 
+#US_population
 
-#Create by Elroy-Tian SDU CS(class 2)
+Create by Elroy-Tian SDU CS(class 2)
 
 The Population Pyramid is a graphic depicting the age and gender distribution of the population in an image similar to the ancient Egyptian pyramids, showing the status of the population and its type of development. The population pyramid can be summarized into three types: (a) Expansion type. The proportion of the young population group is relatively large, gradually decreasing from the lowest age group to the highest age group, and the tower shape is wide and sharp. (b) Stable type. Except for the oldest age group, the other age groups are roughly the same, and the enlargement or reduction is not obvious, and the tower shape is relatively straight. (c) Shrinkage type. The young population group has gradually narrowed down. The proportion of each group in the middle-aged group is larger, and the tower shape is narrower and wider.
 
@@ -23,6 +24,11 @@ Firstly, I decide to use a bar chart as the main body, because the bar chart can
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="https://d3js.org/d3-color.v1.min.js"></script>
 <style>
+
+ #content {
+			text-align:center;
+
+    }
     .axis path,
     .axis line{
         fill: none;
@@ -71,6 +77,10 @@ Firstly, I decide to use a bar chart as the main body, because the bar chart can
 </style>
 
 
+<div id="content1">
+    <svg width="1500" height="800" ></svg>
+</div>
+
 <script >
     // 添加SVG画布
     //var dataset =[885,325,285,706 ];//['crew',885], ['first',325], ['second',285], ['third',706]  [885],[325],[285],[706]  885,325,285,706
@@ -90,8 +100,8 @@ Firstly, I decide to use a bar chart as the main body, because the bar chart can
     //var key =['crew','first','second','third'];
     var width = 1500;    // SVG的宽度
     var height = 800;   // SVG的长度
-    var svg = d3.select("body")
-        .append('svg')  // body中添加SVG
+    var svg = d3.select("svg")
+        //.append('svg')  // body中添加SVG
         .attr('width', width)
         .attr('height', height);
     var padding = {top: 20, right: 50, bottom: 70, left: 50};

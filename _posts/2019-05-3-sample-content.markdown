@@ -26,7 +26,7 @@ At last, I spent half a day in hosting the Visualization on GitHub, and I failed
 <script src="https://d3js.org/topojson.v1.min.js"></script>
 <script src="https://unpkg.com/d3-tip@0.7.1/index.js"></script>
 <style>
-    <!-- body{ text-align:center}-->
+    
     #content1 {
 
         padding: 60px;

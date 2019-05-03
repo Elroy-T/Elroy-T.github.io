@@ -37,6 +37,7 @@ Firstly, I decide to use a bar chart as the main body, because the bar chart can
         margin-left: auto;
         margin-right: auto;
         display: block;
+        text-align:center;
     }
 
     .bar.right {

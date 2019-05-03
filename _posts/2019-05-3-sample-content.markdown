@@ -26,14 +26,14 @@ At last, I spent half a day in hosting the Visualization on GitHub, and I failed
 <script src="https://d3js.org/topojson.v1.min.js"></script>
 <script src="https://unpkg.com/d3-tip@0.7.1/index.js"></script>
 <style>
-    body{ text-align:center}
+    <!-- body{ text-align:center}-->
     #content1 {
 
         padding: 60px;
         width: 1000px;
 
         margin:0 auto;
-
+			text-align:center;
 
     }
     h1, h2 {
@@ -41,12 +41,14 @@ At last, I spent half a day in hosting the Visualization on GitHub, and I failed
         font-size: 2.75em;
         font-weight: 900;
         color: #000;
+        text-align:center;
     }
     h3, h4 {
         line-height: 1em;
         font-size: 1.15em;
         font-weight: 900;
         color: #444;
+        text-align:center;
     }
     .d3-tip {
         font-family: sans-serif;

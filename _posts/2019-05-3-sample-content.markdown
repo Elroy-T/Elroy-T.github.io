@@ -45,7 +45,7 @@ At last, I spent half a day in hosting the Visualization on GitHub, and I failed
         color: #000;
         text-align:center;
     }
-    h3, h4 {
+    hh3, hh4 {
         line-height: 1em;
         font-size: 1.15em;
         font-weight: 900;
@@ -70,7 +70,7 @@ At last, I spent half a day in hosting the Visualization on GitHub, and I failed
 
 <div id="content1">
     <hh1>Global cities' population</hh1>
-    <h3>Cities with population more than
+    <hh3>Cities with population more than
     <select id="test">
         <option value="0">100,000</option>
         <option value="1">500,000</option>
@@ -78,8 +78,8 @@ At last, I spent half a day in hosting the Visualization on GitHub, and I failed
         <option value="3">10,000,000</option>
     </select>
 
-    </h3>
-    <h4>Projection Mode：
+    </hh3>
+    <hh4>Projection Mode：
         <select id="test2">
             <option value="0">orthographic</option>
             <option value="1">stereographic</option>
@@ -87,7 +87,7 @@ At last, I spent half a day in hosting the Visualization on GitHub, and I failed
 
         </select>
         <input type="button" value="Show" onclick="fun()">
-    </h4>
+    </hh4>
     <svg width="960" height="500" ></svg>
 </div>
 <script>

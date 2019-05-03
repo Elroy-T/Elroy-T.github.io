@@ -5,11 +5,11 @@ date:   2019-04-4 16:50:00
 categories: main
 ---
 
-#Gapminder Analysis
+# Gapminder Analysis
 
 Created by Elroy-Tian SDU CS junior (class 2)
 
-##Income-Math achievement
+## Income-Math achievement
 
 ![Income-Math achievement](/picture/Income-MathAchievement.png)
 
@@ -18,7 +18,7 @@ As the figure showing, Math achievement is roughly positively correlated with pe
 
 
 
-##Income-Adults with HIV  
+## Income-Adults with HIV  
 
 ![Income-Adults with HIV](/picture/Income-AdultsWithHIV.png)
 

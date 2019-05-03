@@ -131,12 +131,12 @@ At last, I spent half a day in hosting the Visualization on GitHub, and I failed
 
 
 function show() {
-var document = "data/cities100000.csv";
+var document = "/data/cities100000.csv";
 console.log(threshold);
     switch(threshold)
     {
         case 0:
-            document = "https://github.com/Elroy-T/Elroy-T.github.io/tree/master/data/cities100000.csv";
+            document = "/data/cities100000.csv";
             break;
         case '1':
             document = "https://github.com/Elroy-T/Elroy-T.github.io/tree/master/data/cities500000.csv";
@@ -148,7 +148,7 @@ console.log(threshold);
             document = "https://github.com/Elroy-T/Elroy-T.github.io/tree/master/data/cities10000000.csv";
             break;
         default:
-            document = "https://github.com/Elroy-T/Elroy-T.github.io/tree/master/data/cities100000.csv";
+            document = "/data/cities100000.csv";
             console.log("default");
     }
 console.log(document);
@@ -156,8 +156,7 @@ console.log(document);
         .defer(d3.json, 'https://unpkg.com/world-atlas@1/world/110m.json')
         .defer(d3.json, 'https://unpkg.com/world-atlas@1/world/50m.json')
         .defer(d3.csv, document)
-        //.defer(d3.csv, "https://github.com/Elroy-T/Elroy-T.github.io/tree/master/data/cities1000000.csv")
-        // d3.queue()
+        
         .await((error, world110m, world50m, cities) => {
             console.log("读取成功！");
             const countries110m = topojson

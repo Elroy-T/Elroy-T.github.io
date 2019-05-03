@@ -16,7 +16,7 @@ After a century of change, the population of the United States has increased sig
 Firstly, I decide to use a bar chart as the main body, because the bar chart can better reflect the difference in the number of different groups. Secondly, in the use of color, I decide to use blue for men and pink for women, where light blue and light pink represent 2000 year’s data, dark blue and dark represent 1900 year’s data. Especially，I struggled with choosing dark or light color for 2000. by comparing the visualization results of these two color schemes, I found that because the number of people of all ages in 2000 was much more than 1900, the color scheme of using light colors to indicate 2000 year’s data can simultaneously make the shape of the two pyramids more visible.
 
 
-
+----
 
 
   

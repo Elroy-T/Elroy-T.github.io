@@ -136,19 +136,19 @@ console.log(threshold);
     switch(threshold)
     {
         case 0:
-            document = "data/cities100000.csv";
+            document = "https://github.com/Elroy-T/Elroy-T.github.io/tree/master/data/cities100000.csv";
             break;
         case '1':
-            document = "data/cities500000.csv";
+            document = "https://github.com/Elroy-T/Elroy-T.github.io/tree/master/data/cities500000.csv";
             break;
         case '2':
-            document = "data/cities1000000.csv";
+            document = "https://github.com/Elroy-T/Elroy-T.github.io/tree/master/data/cities1000000.csv";
             break;
         case '3':
-            document = "data/cities10000000.csv";
+            document = "https://github.com/Elroy-T/Elroy-T.github.io/tree/master/data/cities10000000.csv";
             break;
         default:
-            document = "data/cities100000.csv";
+            document = "https://github.com/Elroy-T/Elroy-T.github.io/tree/master/data/cities100000.csv";
             console.log("default");
     }
 console.log(document);
@@ -156,7 +156,7 @@ console.log(document);
         .defer(d3.json, 'https://unpkg.com/world-atlas@1/world/110m.json')
         .defer(d3.json, 'https://unpkg.com/world-atlas@1/world/50m.json')
         .defer(d3.csv, document)
-        //.defer(d3.csv, "data/cities1000000.csv")
+        //.defer(d3.csv, "https://github.com/Elroy-T/Elroy-T.github.io/tree/master/data/cities1000000.csv")
         // d3.queue()
         .await((error, world110m, world50m, cities) => {
             console.log("读取成功！");

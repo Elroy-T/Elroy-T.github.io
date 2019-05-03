@@ -38,7 +38,7 @@ At last, I spent half a day in hosting the Visualization on GitHub, and I failed
 		text-align:center;
 
     }
-    h1, h2 {
+    hh1, hh2 {
         line-height: 1em;
         font-size: 2.75em;
         font-weight: 900;
@@ -69,7 +69,7 @@ At last, I spent half a day in hosting the Visualization on GitHub, and I failed
 </style>
 
 <div id="content1">
-    <h1>Global cities' population</h1>
+    <hh1>Global cities' population</hh1>
     <h3>Cities with population more than
     <select id="test">
         <option value="0">100,000</option>

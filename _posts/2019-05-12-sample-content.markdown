@@ -1,15 +1,17 @@
 ---
 layout: default
-title:  "Assignment 1 US_population"
+title:  "Assignment 2 Gapminder Analysis"
 date:   2019-04-4 16:50:00
 categories: main
 ---
 
 #Gapminder Analysis
 
+Created by Elroy-Tian SDU CS junior (class 2)
+
 ##Income-Math achievement
 
-![Income-Math achievement](https://github.com/Elroy-T/Elroy-T.github.io/blob/master/picture/Income-MathAchievement.png)
+![Income-Math achievement](/picture/Income-MathAchievement.png)
 
 As the figure showing, Math achievement is roughly positively correlated with per capita income. That is, countries with higher incomes have a higher probability of obtaining Math achievement, and of course there are a few exceptions, such as Saudi Arabia and Kuwait.
 

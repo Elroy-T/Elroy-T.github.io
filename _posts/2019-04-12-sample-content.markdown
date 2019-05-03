@@ -26,7 +26,7 @@ print_hi('Tom')
 
 
   
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="https://d3js.org/d3-color.v1.min.js"></script>
 <style>
     .axis path,

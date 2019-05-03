@@ -20,7 +20,7 @@ At last, I spent half a day in hosting the Visualization on GitHub, and I failed
 	
 
 -----
-网站读取文件还有些问题，请以提交作业为准
+
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://d3js.org/topojson.v1.min.js"></script>

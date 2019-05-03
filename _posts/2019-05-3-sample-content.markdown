@@ -5,7 +5,7 @@ date:   2019-05-3 15:50:00
 categories: main
 ---
 
-# global_cities_population
+# Global cities' population
 
 Create by Elroy-Tian SDU CS(class 2)
 
@@ -35,7 +35,7 @@ At last, I spent half a day in hosting the Visualization on GitHub, and I failed
         width: 1000px;
 
         margin:0 auto;
-			text-align:center;
+		text-align:center;
 
     }
     h1, h2 {

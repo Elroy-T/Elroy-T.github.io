@@ -6,7 +6,7 @@ categories: main
 ---
 
 
-# US_population
+# The Population Pyramid of USA
 
 Create by Elroy-Tian SDU CS(class 2)
 

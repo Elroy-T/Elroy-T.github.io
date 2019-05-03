@@ -5,7 +5,9 @@ date:   2019-05-3 15:50:00
 categories: main
 ---
 
-# Create by Elroy-Tian SDU CS(class 2)
+# global_cities_population
+
+Create by Elroy-Tian SDU CS(class 2)
 
 Background: As a junior who intends to study abroad, at the beginning, I intend to make a map of the destinations of Chinese students who want to study abroad. So I began to search for data on the Internet, both at home and abroad, and even on the UNESCO website. The UNESCO website has the number of Chinese students studying abroad, but it does not have any data about which countries did they have gone. So I gave up this idea. One evening, I was on my way back to school after having a BBQ with my friends, we happened to be discussing which provinces in China have more than 100 million people, which inspired me. I can turn to build a visualization about which cities around the world with more than 10 million people. This is the origin of my assignment.
 

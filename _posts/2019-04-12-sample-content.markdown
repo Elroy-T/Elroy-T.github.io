@@ -22,8 +22,8 @@ print_hi('Tom')
 
 ```
 
-<!DOCTYPE html>
-<html>
+
+
 <head>
     <meta charset="utf-8">
     <title></title>
@@ -343,5 +343,5 @@ print_hi('Tom')
 
 
 </body>
-</html>
+
 ```

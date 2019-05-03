@@ -5,23 +5,6 @@ date:   2019-03-12 17:50:00
 categories: main
 ---
 
-You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
-To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
-
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-
-
-
-
 
 
 
@@ -90,8 +73,6 @@ print_hi('Tom')
     var year=[];
     var age=[];
     var people=[];
-
-
 
 
     //var key =['crew','first','second','third'];
@@ -249,8 +230,6 @@ print_hi('Tom')
             .call(yAxis2);
 
 
-       // alert("legend");
-
         bar.append("rect")
             .attr("x", padding.left+ 100)
             .attr("y", height-40)
@@ -306,10 +285,6 @@ print_hi('Tom')
             .text("Woman(1900)");
 
 
-
-
-
-
         bar.append("text")
             .attr("transform","translate(" + (xAxisWidth+70) + "," + (height- padding.bottom+10) + ")")
             .attr("font-size","12px")
@@ -327,15 +302,30 @@ print_hi('Tom')
             .attr("transform","translate(" + (padding.left+280) + "," + (height - padding.bottom - yAxisWidth-40) + ")")
             .attr("font-size","20px")
             .text("The Change of U.S. Population Pyramid (1900-2000)");
-        //
-
 
     });
 
-
-
-
 </script>
+
+
+You'll find this post in your `_posts` directory - edit this post and re-build (or run with the `-w` switch) to see your changes!
+To add new posts, simply add a file in the `_posts` directory that follows the convention: YYYY-MM-DD-name-of-post.ext.
+
+Jekyll also offers powerful support for code snippets:
+
+{% highlight ruby %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+
+
+
+
+
+
 
 
 

@@ -50,7 +50,6 @@ At last, I spent half a day in hosting the Visualization on GitHub, and I failed
         font-size: 1.15em;
         font-weight: 900;
         color: #444;
-        text-align:center;
     }
     .d3-tip {
         font-family: sans-serif;
@@ -79,6 +78,7 @@ At last, I spent half a day in hosting the Visualization on GitHub, and I failed
     </select>
 
     </hh3>
+    
     <hh4>Projection Mode：
         <select id="test2">
             <option value="0">orthographic</option>

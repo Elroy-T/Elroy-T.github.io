@@ -29,7 +29,7 @@ At last, I spent half a day in hosting the Visualization on GitHub, and I failed
 <script src="https://unpkg.com/d3-tip@0.7.1/index.js"></script>
 <style>
     
-    #content1 {
+    #content1,#content2,#content3 {
 
         padding: 60px;
         width: 1000px;
@@ -69,6 +69,8 @@ At last, I spent half a day in hosting the Visualization on GitHub, and I failed
 
 <div id="content1">
     <hh1>Global cities' population</hh1>
+</div>
+<div id="content2">
     <hh3>Cities with population more than
     <select id="test">
         <option value="0">100,000</option>
@@ -78,15 +80,15 @@ At last, I spent half a day in hosting the Visualization on GitHub, and I failed
     </select>
 
     </hh3>
-    
+ </div>
+ <div id="content3">   
     <hh4>Projection Mode：
-        <select id="test2">
-            <option value="0">orthographic</option>
-            <option value="1">stereographic</option>
-            <option value="2">pseudocylindrical</option>
-
-        </select>
-        <input type="button" value="Show" onclick="fun()">
+    <select id="test2">
+        <option value="0">orthographic</option>
+        <option value="1">stereographic</option>
+        <option value="2">pseudocylindrical</option>
+    </select>
+    <input type="button" value="Show" onclick="fun()">
     </hh4>
     <svg width="960" height="500" ></svg>
 </div>

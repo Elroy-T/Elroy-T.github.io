@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  "Assignment 1 US_population"
+title:  "Assignment 3 global_cities_population"
 date:   2019-05-3 15:50:00
 categories: main
 ---
@@ -19,14 +19,14 @@ At last, I spent half a day in hosting the Visualization on GitHub, and I failed
 (I'm trying to figure out it now, maybe I succeed after several days, maybe not... here is the address of my GitHub.io maybe you can have a try... https://elroy-t.github.io   )
 	
 
----
+-----
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://d3js.org/topojson.v1.min.js"></script>
 <script src="https://unpkg.com/d3-tip@0.7.1/index.js"></script>
 <style>
     body{ text-align:center}
-    #content {
+    #content1 {
 
         padding: 60px;
         width: 1000px;
@@ -63,7 +63,7 @@ At last, I spent half a day in hosting the Visualization on GitHub, and I failed
     }
 </style>
 
-<div id="content">
+<div id="content1">
     <h1>Global-Population</h1>
     <h3>Cities with population more than
     <select id="test">

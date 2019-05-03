@@ -31,7 +31,7 @@ At last, I spent half a day in hosting the Visualization on GitHub, and I failed
     
     #content1,#content2,#content3 {
 
-        padding: 60px;
+        padding: 5px;
         width: 1000px;
 
         margin:0 auto;

@@ -139,13 +139,13 @@ console.log(threshold);
             document = "/data/cities100000.csv";
             break;
         case '1':
-            document = "https://github.com/Elroy-T/Elroy-T.github.io/tree/master/data/cities500000.csv";
+            document = "/data/cities500000.csv";
             break;
         case '2':
-            document = "https://github.com/Elroy-T/Elroy-T.github.io/tree/master/data/cities1000000.csv";
+            document = "/data/cities1000000.csv";
             break;
         case '3':
-            document = "https://github.com/Elroy-T/Elroy-T.github.io/tree/master/data/cities10000000.csv";
+            document = "/data/cities10000000.csv";
             break;
         default:
             document = "/data/cities100000.csv";

@@ -308,22 +308,15 @@ categories: main
 </script>
 
 
-Create by Elroy-Tian SDU CS(class 2)
+###Create by Elroy-Tian SDU CS(class 2)
+The Population Pyramid is a graphic depicting the age and gender distribution of the population in an image similar to the ancient Egyptian pyramids, showing the status of the population and its type of development. The population pyramid can be summarized into three types: (a) Expansion type. The proportion of the young population group is relatively large, gradually decreasing from the lowest age group to the highest age group, and the tower shape is wide and sharp. (b) Stable type. Except for the oldest age group, the other age groups are roughly the same, and the enlargement or reduction is not obvious, and the tower shape is relatively straight. (c) Shrinkage type. The young population group has gradually narrowed down. The proportion of each group in the middle-aged group is larger, and the tower shape is narrower and wider.
 
-	The Population Pyramid is a graphic depicting the age and gender distribution of the population in an image similar to the ancient Egyptian pyramids, showing the status of the population and its type of development. The population pyramid can be summarized into three types: (a) Expansion type. The proportion of the young population group is relatively large, gradually decreasing from the lowest age group to the highest age group, and the tower shape is wide and sharp. (b) Stable type. Except for the oldest age group, the other age groups are roughly the same, and the enlargement or reduction is not obvious, and the tower shape is relatively straight. (c) Shrinkage type. The young population group has gradually narrowed down. The proportion of each group in the middle-aged group is larger, and the tower shape is narrower and wider.
+After a century of change, the population of the United States has increased significantly and the population structure has changed. However，it is difficult to reflect the changes in demographic structure by observing the data in the CSV file. Therefore, I want to reflect the changes in the population structure of the United States by drawing a pyramid of American population at these two time points.
 
-	After a century of change, the population of the United States has increased significantly and the population structure has changed. However，it is difficult to reflect the changes in demographic structure by observing the data in the CSV file. Therefore, I want to reflect the changes in the population structure of the United States by drawing a pyramid of American population at these two time points.
-
-	Firstly, I decide to use a bar chart as the main body, because the bar chart can better reflect the difference in the number of different groups. Secondly, in the use of color, I decide to use blue for men and pink for women, where light blue and light pink represent 2000 year’s data, dark blue and dark represent 1900 year’s data. Especially，I struggled with choosing dark or light color for 2000. by comparing the visualization results of these two color schemes, I found that because the number of people of all ages in 2000 was much more than 1900, the color scheme of using light colors to indicate 2000 year’s data can simultaneously make the shape of the two pyramids more visible.
+Firstly, I decide to use a bar chart as the main body, because the bar chart can better reflect the difference in the number of different groups. Secondly, in the use of color, I decide to use blue for men and pink for women, where light blue and light pink represent 2000 year’s data, dark blue and dark represent 1900 year’s data. Especially，I struggled with choosing dark or light color for 2000. by comparing the visualization results of these two color schemes, I found that because the number of people of all ages in 2000 was much more than 1900, the color scheme of using light colors to indicate 2000 year’s data can simultaneously make the shape of the two pyramids more visible.
 
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+
 
 
 

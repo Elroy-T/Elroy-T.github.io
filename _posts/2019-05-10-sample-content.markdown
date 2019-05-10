@@ -73,7 +73,7 @@ Clearly encode depth levelNo edge crossingsIsomorphic subtrees drawn identical
 </style>
 
 <script type="text/javascript">
-	d3.json("data/flare.json",function(error, root){
+	d3.json("/data/flare.json",function(error, root){
 		var width = 1200;
 		var height = 1200;
 		var svg = d3.select("body")

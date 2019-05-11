@@ -27,7 +27,7 @@ Clearly encode depth levelNo edge crossingsIsomorphic subtrees drawn identical
 
 ![tree1](/picture/tree2.png)
 
-## sHow to achieve it with d3?
+## How to achieve it with d3?
 D3’s tree layout implements the Reingold–Tilford “tidy” algorithm for constructing hierarchical node-link diagrams, improved to run in linear time by Buchheim et al. Tidy trees are typically more compact than cluster dendrograms, which place all leaves at the same level. See also the radial variant.
 
 ```
@@ -50,6 +50,7 @@ var node = g.selectAll(".node")
 
 ----
 
+## Visualization 
 
 <script src="https://d3js.org/d3.v3.min.js"></script>
 
@@ -111,7 +112,7 @@ var node = g.selectAll(".node")
 	d3.json("/data/flare.json",function(error, root){
 		var width = 1200;
 		var height = 1200;
-		var svg = d3.select("body")
+		var svg = d3.select("svg")
 			//			.append("svg")
 					.attr("width", width)
 						.attr("height", height);

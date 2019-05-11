@@ -54,7 +54,7 @@ var node = g.selectAll(".node")
 <script src="https://d3js.org/d3.v3.min.js"></script>
 
 <style type="text/css">
- #content {
+ #content1 {
 			text-align:center;
 
     }

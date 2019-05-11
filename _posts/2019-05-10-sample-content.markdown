@@ -19,9 +19,27 @@ Clearly encode depth levelNo edge crossingsIsomorphic subtrees drawn identical
 
 ## Algorithm principleInitial bottom-up (post-order) traversal of the treeY-coordinates based on tree depthX-coordinates set piecemeal via “shifts” at each depthAt each parent node: merge left and right subtreesShift right subtree as close as possible to the left Computed efficiently by maintaining subtree contours “Shifts” in position saved for each nodeParent nodes centered above childrenFinal top-down (pre-order) traversal to set X-coordinatesSum initial layout and aggregated shifts## Example: Radial Tree Layouts
 
+![tree1](/picture/tree1.png) ![tree1](/picture/tree2.png)
 
 ## sHow to achieve it with d3?
-D3’s tree layout implements the Reingold–Tilford “tidy” algorithm for constructing hierarchical node-link diagrams, improved to run in linear time by Buchheim et al. Tidy trees are typically more compact than cluster dendrograms, which place all leaves at the same level. See also the radial variant.## How to achieve radial?When setting the node's position, set the “transform” with "rotate( d.x - 90)translate( d.y )" 
+D3’s tree layout implements the Reingold–Tilford “tidy” algorithm for constructing hierarchical node-link diagrams, improved to run in linear time by Buchheim et al. Tidy trees are typically more compact than cluster dendrograms, which place all leaves at the same level. See also the radial variant.
+
+```
+var	tree = d3.layout.tree()
+					.size([360, width/2 -100])
+					.separation(function(a,b){
+						return (a.parent == b.parent ? 1 : 2) / a.depth;
+					});
+```## How to achieve radial?When setting the node's position, set the “transform” with "rotate( d.x - 90)translate( d.y )" ```
+var node = g.selectAll(".node")
+					.data(nodes)
+					.enter()
+					.append("g")
+					.attr("class", "node")
+					.attr("transform" , function(d){
+						return "rotate(" + (d.x - 90) + ")translate(" + d.y + ")";
+					});
+```
 
 
 ----
@@ -30,6 +48,10 @@ Clearly encode depth levelNo edge crossingsIsomorphic subtrees drawn identical
 <script src="https://d3js.org/d3.v3.min.js"></script>
 
 <style type="text/css">
+ #content {
+			text-align:center;
+
+    }
 
 	.node {
 		cursor: pointer;
@@ -72,14 +94,21 @@ Clearly encode depth levelNo edge crossingsIsomorphic subtrees drawn identical
 
 </style>
 
+
+
+<div id="content1">
+    <svg width="1200" height="1200" ></svg>
+</div>
+
+
 <script type="text/javascript">
 	d3.json("/data/flare.json",function(error, root){
 		var width = 1200;
 		var height = 1200;
-		var svg = d3.select("body")
-						.append("svg")
-						.attr("width", width)
-						.attr("height", height);
+		//var svg = d3.select("body")
+			//			.append("svg")
+				//		.attr("width", width)
+					//	.attr("height", height);
 		var	tree = d3.layout.tree()
 					.size([360, width/2 -100])
 					.separation(function(a,b){

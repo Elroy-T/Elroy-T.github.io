@@ -5,7 +5,7 @@ date:   2019-05-10 16:50:00
 categories: main
 ---
 
-# Reingold-Tilford algorithm（作业已提交，博客还未写完）
+# Reingold-Tilford algorithm
 
 Create by Elroy-Tian SDU CS(class 2)
 
@@ -19,11 +19,11 @@ Clearly encode depth levelNo edge crossingsIsomorphic subtrees drawn identical
 
 ## Algorithm principleInitial bottom-up (post-order) traversal of the treeY-coordinates based on tree depthX-coordinates set piecemeal via “shifts” at each depthAt each parent node: merge left and right subtreesShift right subtree as close as possible to the left Computed efficiently by maintaining subtree contours “Shifts” in position saved for each nodeParent nodes centered above childrenFinal top-down (pre-order) traversal to set X-coordinatesSum initial layout and aggregated shifts## Example: Radial Tree Layouts
 
-### example 1:
+### example 1 (data: flare-one.json):
 
 ![tree1](/picture/tree1.png) 
 
-### example 2:
+### example 2 (data: flare.json):
 
 ![tree1](/picture/tree2.png)
 

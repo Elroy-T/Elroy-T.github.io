@@ -19,6 +19,8 @@ While graph drawing can be a difficult problem, force-directed algorithms, being
 
 So powerful D3.js is, that it provides a lot of methods which will be used when we make force-directed graph. So the easiest way to complete this assignment is to use D3's method.
 
+
+
 ---
 
 
@@ -62,7 +64,10 @@ So powerful D3.js is, that it provides a lot of methods which will be used when 
 	}
 
 </style>
-<body>
+
+<div id="content1">
+    <svg width="1560" height="1200" ></svg>
+</div>
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script>
 
@@ -126,7 +131,7 @@ So powerful D3.js is, that it provides a lot of methods which will be used when 
 			.on("tick", tick)//指时间间隔，隔一段时间刷新一次画面
 			.start();//开始转换
 
-	var svg = d3.select("body").append("svg")
+	var svg = d3.select("svg").append("svg")
 			.attr("width", width)
 			.attr("height", height);
 
@@ -361,9 +366,15 @@ So powerful D3.js is, that it provides a lot of methods which will be used when 
 
 
 
-## Design Considerations
 
-Clearly encode depth levelNo edge crossingsIsomorphic subtrees drawn identically Ordering and symmetry preserved Compact layout (don’t waste space)
+## Implementation method 2
+
+
+### Barnes-Hut algorithm (use quad-tree)
+
+The Barnes–Hut simulation (named after Josh Barnes and Piet Hut) is an approximation algorithm for performing an n-body simulation. It is notable for having order O(n log n) compared to a direct-sum algorithm which would be O(n2).[1]
+
+The simulation volume is usually divided up into cubic cells via an octree (in a three-dimensional space), so that only particles from nearby cells need to be treated individually, and particles in distant cells can be treated as a single large particle centered at the cell's center of mass (or as a low-order multipole expansion). This can dramatically reduce the number of particle pair interactions that must be computed.
 
 ## Algorithm principleInitial bottom-up (post-order) traversal of the treeY-coordinates based on tree depthX-coordinates set piecemeal via “shifts” at each depthAt each parent node: merge left and right subtreesShift right subtree as close as possible to the left Computed efficiently by maintaining subtree contours “Shifts” in position saved for each nodeParent nodes centered above childrenFinal top-down (pre-order) traversal to set X-coordinatesSum initial layout and aggregated shifts## Example: Radial Tree Layouts
 

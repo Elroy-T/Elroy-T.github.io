@@ -65,7 +65,7 @@ So powerful D3.js is, that it provides a lot of methods which will be used when 
 
 </style>
 
-<div id="content1">
+<div>
     <svg width="1560" height="1200" ></svg>
 </div>
 <script src="https://d3js.org/d3.v3.min.js"></script>

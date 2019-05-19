@@ -115,7 +115,7 @@ So powerful D3.js is, that it provides a lot of methods which will be used when 
 	});
 
 	var width = 1560,
-			height = 800;
+			height = 1200;
 
 	var force = d3.layout.force()//layout将json格式转化为力学图可用的格式
 			.nodes(d3.values(nodes))//设定节点数组

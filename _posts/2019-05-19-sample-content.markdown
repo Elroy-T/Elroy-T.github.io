@@ -402,7 +402,6 @@ The simulation volume is usually divided up into cubic cells via an octree (in a
 <script src="jquery-3.3.1.min.js"></script>
 <script src="quadtree.js"></script>
 <script src="js/test.js"></script>
-
 <div style="text-align: center;">
     <div>
         <h1>Force-Directed layout graph</h1>

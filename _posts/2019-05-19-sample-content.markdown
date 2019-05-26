@@ -412,7 +412,7 @@ The simulation volume is usually divided up into cubic cells via an octree (in a
         <h1>Force-Directed layout graph</h1>
     </div>
 <div><p>Points number：</p>
-<p><input type="text" name="p_num" value="5" id=p_num onblur="pnum(this)"/>
+<p><input type="button" name="p_num" value="5" id=p_num onblur="pnum(this)"/>
 <input type="button" value="Show" onclick="fun()"/></p>
 </div>
     <div>

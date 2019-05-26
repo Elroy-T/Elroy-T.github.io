@@ -398,12 +398,18 @@ The particles connected by the edges are involved by the edges, which generate s
 $$F_2=k_2*(L-\Delta x)$$
 
 
+## Quad-Tree
 
 
+### Constructing a Quad-Tree
 
+To build a Barnes-Hut tree, we insert nodes one by one into the tree. Specifically, when inserting an object B into a tree represented by (root) node X, we recursively perform the following steps (note that here we add a bracket to the word "root" to mean that even if a node in the whole tree is not a root node, it may be the root node of one of the subtrees):
 
+If the (root) node X does not contain objects, the new object B is put into it.
 
+If the (root) node X is an internal node (i.e. a non-leaf node), the total mass and centroid of X are updated. The object B is inserted recursively into one of the four quadrants (or bifurcations).
 
+If (root) node X is an external node (leaf node), it contains an object C, that is to say, there are two objects B and C in the same region. Then the region is further divided into four sub-regions. Then the objects B and C are inserted into the corresponding bifurcation recursively. Because B and C may still be in the same subregion, multiple subregion partitions may be involved in a single insertion operation. Finally, the centroid and total mass of node X are updated.
 
 
 
@@ -605,5 +611,13 @@ function cal_spring()
 
 ```  
   
+  
+  
+### Inspired by:
+
+  https://www.jianshu.com/p/d3c64a39535a
+  
+  https://blog.csdn.net/baimafujinji/article/details/53036473?locationNum=5&fps=1
+
   
   

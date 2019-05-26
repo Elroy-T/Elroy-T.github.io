@@ -381,6 +381,8 @@ The simulation volume is usually divided up into cubic cells via an octree (in a
 
 ## Forces
 
+Force-directed graph drawing algorithms assign forces among the set of edges and the set of nodes of a graph drawing. Typically, spring-like attractive forces based on Hooke's law are used to attract pairs of endpoints of the graph's edges towards each other, while simultaneously repulsive forces like those of electrically charged particles based on Coulomb's law are used to separate all pairs of nodes. In equilibrium states for this system of forces, the edges tend to have uniform length (because of the spring forces), and nodes that are not connected by an edge tend to be drawn further apart (because of the electrical repulsion). Edge attraction and vertex repulsion forces may be defined using functions that are not based on the physical behavior of springs and particles; for instance, some force-directed systems use springs whose attractive force is logarithmic rather than linear.
+
 ### Repulsive Force
 
 
@@ -412,8 +414,8 @@ The simulation volume is usually divided up into cubic cells via an octree (in a
         <h1>Force-Directed layout graph</h1>
     </div>
 <div><p>Points number：</p>
-<p><input type="text" name="p_num" value="5" id=p_num />
-<input type="button" value="Show" id=button onclick="fun()"/></p>
+<p><input type="text" name="p_num" value="5" id="p_num" onblur="pnum(this)" />
+<input type="button" value="Show" onclick="fun()"/></p>
 </div>
     <div>
         <canvas id="canvas" width="1600" height="1600" style="border: 3px solid rgb(190, 120, 120);width:800px;height:800px"></canvas>

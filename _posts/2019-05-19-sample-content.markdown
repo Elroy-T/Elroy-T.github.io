@@ -399,8 +399,8 @@ The simulation volume is usually divided up into cubic cells via an octree (in a
 
 
 ## Visualization 
-<script src="jquery-3.3.1.min.js"></script>
-<script src="quadtree.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/quadtree.js"></script>
 <script src="js/test.js"></script>
 <div style="text-align: center;">
     <div>

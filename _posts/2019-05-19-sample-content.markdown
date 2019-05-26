@@ -420,7 +420,7 @@ $$F_2=k_2*(L-\Delta x) $$
         <h1>Force-Directed layout graph</h1>
     </div>
 <div><p>Points number：
-<input type="text" name="p_num" value="5" id="p_num" onblur="pnum(this)" />
+<input type="text" name="p_num" value="" id="p_num" onblur="pnum(this)" />
 <input type="button" value="Show" onclick="fun()"/></p>
 </div>
     <div>

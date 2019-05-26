@@ -376,43 +376,64 @@ The Barnes–Hut simulation (named after Josh Barnes and Piet Hut) is an approxi
 
 The simulation volume is usually divided up into cubic cells via an octree (in a three-dimensional space), so that only particles from nearby cells need to be treated individually, and particles in distant cells can be treated as a single large particle centered at the cell's center of mass (or as a low-order multipole expansion). This can dramatically reduce the number of particle pair interactions that must be computed.
 
-## Algorithm principleInitial bottom-up (post-order) traversal of the treeY-coordinates based on tree depthX-coordinates set piecemeal via “shifts” at each depthAt each parent node: merge left and right subtreesShift right subtree as close as possible to the left Computed efficiently by maintaining subtree contours “Shifts” in position saved for each nodeParent nodes centered above childrenFinal top-down (pre-order) traversal to set X-coordinatesSum initial layout and aggregated shifts## Example: Radial Tree Layouts
-
-### example 1 (data: flare-one.json):
-
-![tree1](/picture/tree1.png) 
-
-### example 2 (data: flare.json):
-
-![tree1](/picture/tree2.png)
-
-## How to achieve it with d3?
-D3’s tree layout implements the Reingold–Tilford “tidy” algorithm for constructing hierarchical node-link diagrams, improved to run in linear time by Buchheim et al. Tidy trees are typically more compact than cluster dendrograms, which place all leaves at the same level. See also the radial variant.
-
-```
-var	tree = d3.layout.tree()
-					.size([360, width/2 -100])
-					.separation(function(a,b){
-						return (a.parent == b.parent ? 1 : 2) / a.depth;
-					});
-```## How to achieve radial?When setting the node's position, set the “transform” with "rotate( d.x - 90)translate( d.y )" ```
-var node = g.selectAll(".node")
-					.data(nodes)
-					.enter()
-					.append("g")
-					.attr("class", "node")
-					.attr("transform" , function(d){
-						return "rotate(" + (d.x - 90) + ")translate(" + d.y + ")";
-					});
-```
 
 
-----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Visualization 
+<script src="jquery-3.3.1.min.js"></script>
+<script src="quadtree.js"></script>
+<script src="js/test.js"></script>
+
+<div style="text-align: center;">
+    <div>
+        <h1>Force-Directed layout graph</h1>
+    </div>
+    <div>
+        <h4>Points number：
+            <input type=text id=p_num name="p_num" value="" onblur="pnum(this)">
+
+            <input type="button" value="Show" onclick="fun()">
+        </h4>
+    </div>
+
+    <div>
+        <canvas id="canvas" width="1600" height="1600" style="border: 3px solid rgb(190, 120, 120);width:800px;height:800px"></canvas>
+    </div>
+
+    <div>
+        <label id="cord">0,0</label>
+    </div>
+
+</div>
+<script>
+    function fun(){
+        let point_num = p_num.value;
+        console.log(point_num);
+        inti();
+    }
+</script>
 
 
-  ---
+
 ## main part of the Code
 
 ```

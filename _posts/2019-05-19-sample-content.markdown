@@ -387,13 +387,13 @@ Force-directed graph drawing algorithms assign forces among the set of edges and
 
 Considering each node as a electron, the repulsion force between electron and electron is Coulomb force. According to Coulomb's law, the repulsion force between electrons can be calculated as follows:
 
-![formula1](/picture/formula-Coulomb.png) 
+$$F=k*\frac{(q_1)(q_2)}{r^2} $$
 
 ### Traction Force
 
 The particles connected by the edges are involved by the edges, which generate spring-like Hooke gravity:
 
-![formula2](/picture/formula-Hooke.png) 
+
 
 
 

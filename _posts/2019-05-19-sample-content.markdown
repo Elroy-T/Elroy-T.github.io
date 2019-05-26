@@ -410,19 +410,15 @@ The simulation volume is usually divided up into cubic cells via an octree (in a
     <div>
         <h4>Points number：
             <input type=text id=p_num name="p_num" value="" onblur="pnum(this)">
-
             <input type="button" value="Show" onclick="fun()">
         </h4>
     </div>
-
     <div>
         <canvas id="canvas" width="1600" height="1600" style="border: 3px solid rgb(190, 120, 120);width:800px;height:800px"></canvas>
     </div>
-
     <div>
         <label id="cord">0,0</label>
     </div>
-
 </div>
 <script>
     function fun(){

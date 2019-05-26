@@ -387,7 +387,7 @@ Force-directed graph drawing algorithms assign forces among the set of edges and
 
 Considering each node as a electron, the repulsion force between electron and electron is Coulomb force. According to Coulomb's law, the repulsion force between electrons can be calculated as follows:
 
-![formula1](/picture/formula-Coulomb.jpg) 
+![formula1](/picture/formula-Coulomb的副本.jpg) 
 
 ### Traction Force
 

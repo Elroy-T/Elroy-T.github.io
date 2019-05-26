@@ -379,7 +379,7 @@ The simulation volume is usually divided up into cubic cells via an octree (in a
 
 
 
-## Force
+## Forces
 
 ### Repulsive Force
 
@@ -411,8 +411,8 @@ The simulation volume is usually divided up into cubic cells via an octree (in a
     <div>
         <h1>Force-Directed layout graph</h1>
     </div>
-<div><p>Points number：
-<input type="text" name="p_num" value="5" id=p_num onblur="pnum(this)"/>
+<div><p>Points number：</p>
+<p><input type="text" name="p_num" value="5" id=p_num onblur="pnum(this)"/>
 <input type="button" value="Show" onclick="fun()"/></p>
 </div>
     <div>

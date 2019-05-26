@@ -408,8 +408,9 @@ The simulation volume is usually divided up into cubic cells via an octree (in a
     </div>
 <div><h4>Points number：</h4>
 
-<input type="text" value="5" id=p_num onblur="pnum(this)"/>
+
 <input type="button" value="Show" onclick="fun()"/>
+<input type="text" value="5" id=p_num onblur="pnum(this)"/>
 </div>
     <div>
         <canvas id="canvas" width="1600" height="1600" style="border: 3px solid rgb(190, 120, 120);width:800px;height:800px"></canvas>

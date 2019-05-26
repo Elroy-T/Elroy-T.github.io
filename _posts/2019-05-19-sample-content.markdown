@@ -387,9 +387,13 @@ Force-directed graph drawing algorithms assign forces among the set of edges and
 
 Considering each node as a electron, the repulsion force between electron and electron is Coulomb force. According to Coulomb's law, the repulsion force between electrons can be calculated as follows:$\frac{d}{dx}e^{ax}=ae^{ax}\quad$
 
-$$F_1=k_1\frac{(q_1)(q_2)}{r^2}$$
+$$
+	F_1=k_1\frac{(q_1)(q_2)}{r^2}
+$$
 
+```
 $$\frac{d}{dx}e^{ax}=ae^{ax}\quad$$
+```
 
 ### Traction Force
 

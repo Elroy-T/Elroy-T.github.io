@@ -2,7 +2,7 @@
 layout: default
 title:  "A model of Multiclass Density Map"
 date:   2020-05-11 16:50:00
-categories: main
+categories: 
 ---
 
 # A model of Multiclass Density Map

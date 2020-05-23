@@ -16,7 +16,7 @@ Multiclass maps are scatterplots, multidimensional projections, or thematic geog
 
 ## My visualization system
 
-<https://github.com/Elroy-T/Elroy-T.github.io/blob/master/Sample.html>
+<https://elroy-t.github.io/Sample.html>
 
 
 

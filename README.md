@@ -1,4 +1,18 @@
 # how to update
+cd Elroy-T.github.io
+
+git add .
+git commit -m "name"
+git push -u origin master
+
+git add .
+git commit -m "name"
+git push -u origin master
+
+git add .
+git commit -m "name"
+git push -u origin master
+
 # Jekyll Cayman theme
 
 This is a [Jekyll][1] theme for [@jasonlong][2]'s [Cayman theme][4] on [GitHub Pages][3].

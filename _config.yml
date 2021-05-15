@@ -21,7 +21,7 @@ title: "Elroy Tian's little world"
 description: "A growing programmer."
 baseurl: #"/example" # the subpath of your site, e.g. "/blog"
 url: "https://elroy-t.github.io" # the base hostname & protocol for your site e.g.
-logo: "/images/Elroy-Tian-jpg" # path of site logo, e.g. "/assets/images/logo.png"
+logo: "/images/Elroy-Tian-photo.jpg" # path of site logo, e.g. "/assets/images/logo.png"
 date_format: "%B %-d, %Y"
 read_time: true
 words_per_minute: 200

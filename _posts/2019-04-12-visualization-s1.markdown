@@ -3,6 +3,7 @@ title:  "Assignment 1 US_population"
 date:   2019-03-12 17:50:00
 ---
 
+The Population Pyramid is a graphic depicting the age and gender distribution of the population in an image similar to the ancient Egyptian pyramids, showing the status of the population and its type of development. 
 
 # The Population Pyramid of USA
 

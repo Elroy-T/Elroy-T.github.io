@@ -71,7 +71,7 @@ So powerful D3.js is, that it provides a lot of methods which will be used when 
 </style>
 
 <div>
-    <svg width="1560" height="1200" ></svg>
+    <svg width="1200" height="1200" ></svg>
 </div>
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script>
@@ -392,7 +392,7 @@ Force-directed graph drawing algorithms assign forces among the set of edges and
 
 Considering each node as a electron, the repulsion force between electron and electron is Coulomb force. According to Coulomb's law, the repulsion force between electrons can be calculated as follows:
 
-![formula1](/picture/formula-Coulomb的副本.jpg) 
+![formula1](/images/picture/formula-Coulomb的副本.jpg) 
 
 ### Traction Force
 

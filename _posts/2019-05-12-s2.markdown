@@ -1,5 +1,5 @@
 ---
-title:  "Assignment 2 Gapminder Analysis"
+title:  "Visualization: Assignment 2 Gapminder Analysis"
 date:   2019-04-4 16:50:00
 categories:
   - Visualization

@@ -1,5 +1,5 @@
 ---
-title:  "A model of Multiclass Density Map"
+title:  "Graduation Project: A model of Multiclass Density Map"
 date:   2020-05-11 16:50:00
 categories:
   - Graduation Project
@@ -11,7 +11,7 @@ elements:
   - Three.js
 ---
 
-A declarative rendering model of multiclass density map based on WebGL
+A declarative rendering model of multiclass density map based on WebGL.
 
 # A model of Multiclass Density Map
 

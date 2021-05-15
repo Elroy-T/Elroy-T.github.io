@@ -1,5 +1,5 @@
 ---
-title:  "Assignment 1 US_population"
+title:  "Visualization: Assignment 1 US_population"
 date:   2019-03-12 17:50:00
 categories:
   - Visualization

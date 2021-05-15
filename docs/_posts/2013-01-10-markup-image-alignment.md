@@ -13,7 +13,7 @@ tags:
   - css
   - image
   - markup
-last_modified_at: 2018-02-05T16:19:20-05:00
+last_modified_at: 2018-02-05T16:19:55-05:00
 ---
 
 The best way to demonstrate the ebb and flow of the various image positioning options is to nestle them snuggly among an ocean of words. Grab a paddle and let's get started.

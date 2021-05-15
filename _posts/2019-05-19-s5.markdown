@@ -71,7 +71,7 @@ So powerful D3.js is, that it provides a lot of methods which will be used when 
 </style>
 
 <div>
-    <svg width="1200" height="1200" ></svg>
+    <svg width="1000" height="1000" ></svg>
 </div>
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script>
@@ -124,14 +124,14 @@ So powerful D3.js is, that it provides a lot of methods which will be used when 
 		link.target = nodes[link.target] || (nodes[link.target] = {name: link.target});
 	});
 
-	var width = 1200,
-			height = 1200;
+	var width = 1000,
+			height = 1000;
 
 	var force = d3.layout.force()//layout将json格式转化为力学图可用的格式
 			.nodes(d3.values(nodes))//设定节点数组
 			.links(links)//设定连线数组
 			.size([width, height])//作用域的大小
-			.linkDistance(180)//连接线长度
+			.linkDistance(160)//连接线长度
 			.charge(-1500)//顶点的电荷数。该参数决定是排斥还是吸引，数值越小越互相排斥
 			.on("tick", tick)//指时间间隔，隔一段时间刷新一次画面
 			.start();//开始转换
@@ -241,7 +241,7 @@ So powerful D3.js is, that it provides a lot of methods which will be used when 
 				}
 				return color;
 			})
-			.attr("r", 28)//设置圆圈半径
+			.attr("r", 26)//设置圆圈半径
 			.on("click",function(node){
 				//单击时让连接线加粗
 				edges_line.style("stroke-width",function(line){

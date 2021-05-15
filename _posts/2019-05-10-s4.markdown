@@ -26,11 +26,11 @@ Clearly encode depth levelNo edge crossingsIsomorphic subtrees drawn identical
 
 ### example 1 (data: flare-one.json):
 
-![tree1](/picture/tree1.png) 
+![tree1](/images/picture/tree1.png) 
 
 ### example 2 (data: flare.json):
 
-![tree2](/picture/tree2.png)
+![tree2](/images/picture/tree2.png)
 
 ## How to achieve it with d3?
 D3’s tree layout implements the Reingold–Tilford “tidy” algorithm for constructing hierarchical node-link diagrams, improved to run in linear time by Buchheim et al. Tidy trees are typically more compact than cluster dendrograms, which place all leaves at the same level. See also the radial variant.

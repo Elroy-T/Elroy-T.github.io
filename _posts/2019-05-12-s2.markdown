@@ -1,11 +1,14 @@
 ---
 title:  "Visualization: Assignment 2 Gapminder Analysis"
-date:   2019-04-4 16:50:00
+image: 
+  path: /images/picture/Income-AdultsWithHIV.png
+  thumbnail: /images/picture/Income-AdultsWithHIV.png
 categories:
   - Visualization
 tags:
   - visualization
   - d3
+last_modified_at:   2019-04-4 16:50:00
 ---
 
 Two screen shootings from a website about HVI.

@@ -1,5 +1,8 @@
 ---
 title:  "Visualization: Assignment 1 US_population"
+image: 
+  path: /images/picture/population_pyramid.png
+  thumbnail: /images/picture/population_pyramid.png
 date:   2019-03-12 17:50:00
 categories:
   - Visualization

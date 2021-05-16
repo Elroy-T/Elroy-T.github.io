@@ -1,5 +1,8 @@
 ---
 title:  "Graduation Project: A model of Multiclass Density Map"
+image: 
+  path: /images/picture/Graduation_project.png
+  thumbnail: /images/picture/Graduation_project.png
 date:   2020-05-11 16:50:00
 categories:
   - Graduation Project

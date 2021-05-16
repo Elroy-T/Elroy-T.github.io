@@ -1,5 +1,8 @@
 ---
 title:  "Visualization: Assignment 5 force-directed graph layout"
+image: 
+  path: /images/picture/force_directed_map.png
+  thumbnail: /images/picture/force_directed_map.png
 date:   2019-05-19 16:50:00
 categories:
   - Visualization

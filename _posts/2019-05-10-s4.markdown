@@ -1,6 +1,7 @@
 ---
 title:  "Visualization: Assignment 4 Reingold-Tilford algorithm"
 image: 
+  path: /images/picture/tree1.png
   thumbnail: /images/picture/tree1.png
 date:   2019-05-10 16:50:00
 categories:

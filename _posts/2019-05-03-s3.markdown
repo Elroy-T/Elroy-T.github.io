@@ -1,5 +1,8 @@
 ---
 title:  "Visualization: Assignment 3 global_cities_population"
+image: 
+  path: /images/picture/city_pop.png
+  thumbnail: /images/picture/city_pop.png
 date:   2019-05-3 15:50:00
 categories:
   - Visualization

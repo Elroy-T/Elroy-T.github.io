@@ -1,7 +1,6 @@
 ---
 title:  "Visualization: Assignment 2 Gapminder Analysis"
 image: 
-  path: /images/picture/Income-AdultsWithHIV.png
   thumbnail: /images/picture/Income-AdultsWithHIV.png
 categories:
   - Visualization

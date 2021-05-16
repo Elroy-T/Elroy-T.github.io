@@ -35,7 +35,7 @@
     list-style: none;
     border-radius: 0 0 (2 * $border-radius) (2 * $border-radius);
 
-    @include breakpoint($large) {/*$medium*/
+    @include breakpoint($medium) {/*$medium*/
       display: inline-block;
     }
   }
@@ -54,7 +54,7 @@
     border-radius: $border-radius;
   }
 
-  @include breakpoint($large) {/*$medium*/
+  @include breakpoint($medium) {/*$medium*/
     display: block;
   }
 

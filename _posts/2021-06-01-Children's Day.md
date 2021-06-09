@@ -1,8 +1,8 @@
 ---
 title: "Children's Day"
 image: 
-  path: /images/picture/H2R.jpg
-  thumbnail: /images/picture/H2R.jpg
+  path: /images/picture/H2R-simple.jpg
+  thumbnail: /images/picture/H2R-simple.jpg
 categories:
   - Photography
 tags:
@@ -17,7 +17,7 @@ Two Lego sets that I finished during Children's Day.
 
 
 <figure class="align-center">
-  <a href="#"><img src="{{ '/images/picture/mini EV.jpg' | absolute_url }}" alt=""></a>
+  <a href="#"><img src="{{ '/images/picture/mini-EV.jpg' | absolute_url }}" alt=""></a>
   <figcaption>Wuling Hongguang mini EV(pink) </figcaption>
 </figure> 
 

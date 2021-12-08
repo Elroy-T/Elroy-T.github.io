@@ -1,5 +1,5 @@
 ---
-title: "Children's Day"
+title: "Dashboard"
 image: 
   path: /images/picture/Dashboard.png
   thumbnail: /images/picture/Dashboard.png

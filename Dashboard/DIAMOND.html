@@ -11,6 +11,9 @@
 
     <script src="echarts.js"></script>
     <script src="maps/ukmap.js"></script>
+    <script src = "FileSaver.js"></script>
+    <script src="html2canvas.js"></script>
+    <script src = "canvas2image.js"></script>
     <!--<script src="maps/leaflet/leaflet.css"></script>
      <script src="maps/leaflet/leaflet.js"></script>-->
      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -275,7 +278,7 @@
                                     <div class="user-box">
                                         <div class="avatar-lg"><img src="assets/img/profile.jpg" alt="image profile" class="avatar-img rounded"></div>
                                         <div class="u-text">
-                                            <h4>Elroy Tian</h4>
+                                            <h4>Fangzheng Tian</h4>
                                             <p class="text-muted">elroytian@163.com</p><a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
                                         </div>
                                     </div>
@@ -309,7 +312,7 @@
                     <div class="info">
                         <a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
 								<span>
-									Elroy Tian
+									Fangzheng Tian
 									<span class="user-level">IT Administrator</span>
 									<span class="caret"></span>
 								</span>
@@ -497,7 +500,7 @@
                                         <span class="sub-item">In Months</span>
                                     </a>
                                 </li>
-                                <li>
+                                <!--<li>
                                     <a data-toggle ="collapse" href="#StaffTraining" onclick="ChartClass = 5; ChartTime = 1; console.log('chart class ='+ChartClass+'chart time ='+ChartArea);generateChart();">
                                         <span class="sub-item">In Weeks</span>
                                     </a>
@@ -506,7 +509,7 @@
                                     <a data-toggle ="collapse" href="#StaffTraining" onclick="ChartClass = 5; ChartTime = 2; console.log('chart class ='+ChartClass+'chart time ='+ChartArea);generateChart();">
                                         <span class="sub-item">In Days</span>
                                     </a>
-                                </li>
+                                </li>-->
                             </ul>
                         </div>
                     </li>
@@ -588,7 +591,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="mx-4 mt-2">
+                    <li class="mx-4 mt-2" id="readfile">
                         <a href="#" class="btn btn-primary btn-block"><span class="btn-label mr-2"> <i class="fa fa-file-word"></i> </span>Report Abnormal Event</a>
                     </li>
                 </ul>
@@ -601,7 +604,7 @@
         <div class="content">
             <div class="page-inner">
                 <div class="mt-2 mb-4">
-                    <h2 class="text-white pb-2">Welcome back, Elroy!</h2>
+                    <h2 class="text-white pb-2">Welcome back, Fangzheng!</h2>
                     <!--<h5 class="text-white op-7 mb-4">Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself.</h5>-->
                 </div>
                 <!--<div class="row">
@@ -655,7 +658,7 @@
 												</span>
                                             Export
                                         </a>
-                                        <a href="#" class="btn btn-info btn-border btn-round btn-sm">
+                                        <a href="#" class="btn btn-info btn-border btn-round btn-sm" onclick="printdata()">
 												<span class="btn-label">
 													<i class="fa fa-print"></i>
 												</span>
@@ -681,7 +684,7 @@
                         <div class="card card-secondary">
                             <div class="card-header">
                                 <div class="card-title">Upload & Download</div>
-                                <div class="card-category">November 5</div>
+                                <div class="card-category" id="date">November 5</div>
                             </div>
                             <div class="card-body pb-0">
                                 <div class="mb-4 mt-2">
@@ -1308,6 +1311,10 @@
     //         map: 'uk'
     //     }]
     // });
+    var mydata = new Date();
+    var myday = mydata.getDate();
+    document.getElementById('date').innerText = 'December ' + myday;//找到id为'myId'的标签替换它的内容为html的值
+
     var chartDom = document.getElementById('main');
     var myChart = echarts.init(chartDom);
     var option;
@@ -1388,6 +1395,7 @@
 
             }
             ChartTitle = classlist[ChartClass] + " in " + arealist[ChartArea];
+            document.getElementById('chart_title').innerText = ChartTitle;//找到id为'myId'的标签替换它的内容为html的值
             map.setView(maplocationlist[ChartArea], maplocationhight[ChartArea]);
             //map.setOpacity(1);
 
@@ -1399,38 +1407,142 @@
             }
 
             ChartTitle = classlist[ChartClass];
-            //map.remove();
-            //map.setOpacity(0);
-            //map.cancel();
-            //html_title='<div class="card-title" id = "chart_title">'+ChartTitle+'</div>';
             document.getElementById('chart_title').innerText = ChartTitle;//找到id为'myId'的标签替换它的内容为html的值
-            option = {
-                backgroundColor: '#142032',//2c343c
-                xAxis: {
-                    type: 'category',
-                    data: timelist[ChartTime],
-                    axisLabel: {
-                        color:'#FFFFFF'
+            var datajob = [6,11,24,21,38];//[80,  83,  85,  91,  92,  95,  96,  98,  97,  95,  98,  99 ]
+            var jobname = ['Under Training','administrator','Report Reviewer','IT Department','Others'];
+            if(ChartClass ===5){
+                myChart.clear();
+                //var chartDom5 = document.getElementById('main');
+                //var myChart5 = echarts.init(chartDom5);
+                //setTimeout(function () {
+                    option5 = {
+                        backgroundColor: '#142032',//2c343c
+                        legend: {textStyle:{color: '#FFFFFF'}},
+                        tooltip: {
+                            trigger: 'axis',
+                            showContent: false
+                        },
+                        replaceMerge: 'series',
+                        dataset: {
+                            source: [
+                                ['Month', 'JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEPT','OCT','NOV','DEC'],
+                                ['Under Training', 20, 17, 15, 9, 8, 8,5, 6, 8, 7, 5, 6],
+                                ['administrator', 11.1, 11.4, 15.1, 13.3, 13.8, 18.7,11.1, 11.4, 15.1, 13.3, 13.8, 11],
+                                ['Report Reviewer', 20.1, 22.2, 29.5, 26.4, 25.2, 22.5,20.1, 22.2, 29.5, 26.4, 25.2, 24],
+                                ['IT Department', 25.2, 27.1, 21.2, 28, 23.9, 29.1,25.2, 27.1, 21.2, 28, 23.9, 21],
+                                ['Others', 35.2, 37.1, 31.2, 38, 33.9, 39.1,35.2, 37.1, 31.2, 38, 33.9, 38],
+                            ]
+                        },
+                        xAxis: { type: 'category' },
+                        yAxis: { gridIndex: 0 },
+                        grid: { top: '55%' },
+                        series: [
+                            {
+                                type: 'line',
+                                smooth: true,
+                                seriesLayoutBy: 'row',
+                                emphasis: { focus: 'series' }
+                            },
+                            {
+                                type: 'line',
+                                smooth: true,
+                                seriesLayoutBy: 'row',
+                                emphasis: { focus: 'series' }
+                            },
+                            {
+                                type: 'line',
+                                smooth: true,
+                                seriesLayoutBy: 'row',
+                                emphasis: { focus: 'series' }
+                            },
+                            {
+                                type: 'line',
+                                smooth: true,
+                                seriesLayoutBy: 'row',
+                                emphasis: { focus: 'series' }
+                            },
+                            {
+                                type: 'line',
+                                smooth: true,
+                                seriesLayoutBy: 'row',
+                                emphasis: { focus: 'series' }
+                            },
+                            {
+                                type: 'pie',
+                                id: 'pie',
+                                radius: '30%',
+                                center: ['50%', '25%'],
+                                emphasis: {
+                                    focus: 'self'
+                                },
+                                label: {
+                                    formatter: '{b}: {@DEC} ({d}%)'
+                                },
+                                encode: {
+                                    itemName: 'Month',
+                                    value: 'DEC',
+                                    tooltip: 'DEC'
+                                }
+                            }
+                        ]
+                    };
+                    myChart.on('updateAxisPointer', function (event) {
+                        const xAxisInfo = event.axesInfo[0];
+                        if (xAxisInfo) {
+                            const dimension = xAxisInfo.value + 1;
+                            myChart5.setOption({
+                                series: {
+                                    id: 'pie',
+                                    label: {
+                                        formatter: '{b}: {@[' + dimension + ']} ({d}%)'
+                                    },
+                                    encode: {
+                                        value: dimension,
+                                        tooltip: dimension
+                                    }
+                                }
+                            });
+                        }
+                    });
+                    myChart.setOption(option5);
+
+                //});
+
+            }else{
+                myChart.clear();
+                //var chartDom = document.getElementById('main');
+                //var myChart = echarts.init(chartDom);
+                option = {
+                    backgroundColor: '#142032',//2c343c
+                    xAxis: {
+                        type: 'category',
+                        data: timelist[ChartTime],
+                        axisLabel: {
+                            color:'#FFFFFF'
+                        },
+                        axisLine:{
+                            lineStyle: {
+                                color: '#FFFFFF'
+                            }}
                     },
-                    axisLine:{
-                        lineStyle: {
-                            color: '#FFFFFF'
-                        }}
-                },
-                yAxis: {
-                    type: 'value',
-                    axisLabel: {
-                        color:'#FFFFFF'
-                    }
-                },
-                series: [
-                    {
-                        data: datalist[ChartClass][ChartTime],
-                        type: 'line'
-                    }
-                ]
-            };
-            option && myChart.setOption(option);
+                    yAxis: {
+                        type: 'value',
+                        axisLabel: {
+                            color:'#FFFFFF'
+                        }
+                    },
+                    replaceMerge: 'series',
+                    series: [
+                        {
+                            data: datalist[ChartClass][ChartTime],
+                            type: 'line'
+                        }
+                    ]
+                };
+                myChart.setOption(option);
+
+            }
+
         }
 
 
@@ -1446,8 +1558,10 @@
         [[147,  97,  143,  85,  119,  110,  88,  92,  96,  66,  67,  81],[20,19,22,17],[3,2,5,3,1,5,2]],
         [[80,  83,  85,  91,  92,  95,  96,  98,  97,  95,  98,  99 ],[98,98,99,99],[98,98,98,99,99,99,99]],
         [[6,5,4,4,3,4,3,4,3,2,2,1],[0,0,0,1],[0,0,0,0,1,0,0]],
-        [[82,  86,  88, 83,  84,  87,  91,  92,  95,  93,  91,  94],[94,95,94,94],[94,94,93,94,93,94,95]],
+        [[82,  86,  88, 83,  84,  87,  91,  92,  95,  93,  91,  94],[94,95,94,94],[94,94,93,94,93,95,94]],
         [[23,  21,  19,  22,  21,  16,  17,  18,  15,  10,  7,  12],[13,12,12,11],[12,11,13,12,10,15,11]]];
+    // var datajob = [6,11,24,21,38];
+    // var jobname = ['Under Training','administrator','Report Reviewer','IT Department','Others'];
     option = {
         xAxis: {
             type: 'category',
@@ -1470,7 +1584,8 @@
             {
                 data: datalist[1][0],
                 type: 'line'
-            }
+            },
+
         ]
     };
 
@@ -1500,7 +1615,8 @@
         },
         legend: {
             data: ['download', 'upload'],
-            left: 10
+            left: 10,
+            textStyle:{color: '#FFFFFF'}
         },
         // toolbox: {
         //     feature: {
@@ -1582,6 +1698,7 @@
         yAxis: [
             {
                 name: 'download',
+                nameTextStyle:{color: '#FFFFFF'},
                 type: 'value',
                 axisLabel: {
                     color:'#FFFFFF'
@@ -1592,6 +1709,7 @@
             {
                 gridIndex: 1,
                 name: 'upload',
+                nameTextStyle:{color: '#FFFFFF'},
                 type: 'value',
                 inverse: true,
                 axisLabel: {
@@ -1642,6 +1760,27 @@
         document.getElementById('upload').innerText = uploadtext.substring(0,10)+','+uploadtext.substring(10,13)+','+uploadtext.substring(13,16);
         document.getElementById('download').innerText = downloadtext.substring(0,12)+','+downloadtext.substring(12,15)+','+downloadtext.substring(15,18);
         t = setTimeout(time, 1000); //设定定时器，循环运行
+    }
+    function printdata() {
+
+        // window.document.body.innerHTML=window.document.getElementById("main").innerHTML;
+        // window.print();
+
+        html2canvas(document.getElementById('main')).then(
+            function (canvas) {
+                window.print(canvas);  // 打印canvas
+            }
+        );
+    }
+    function show()
+    {
+        var reader = new FileReader();
+        reader.onload = function()
+        {
+            alert(this.result)
+        }
+        var f = document.getElementById("readfile").files[0];
+        reader.readAsText(f);
     }
 
 </script>

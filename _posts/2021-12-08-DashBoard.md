@@ -19,7 +19,7 @@ The Dashboard Design of group assignment:
 </figure> 
 
 
-<https://elroy-t.github.io/Dashboard/DIAMOND.html>
+The website of Dashboard: <https://elroy-t.github.io/Dashboard/DIAMOND.html>
 
 
 

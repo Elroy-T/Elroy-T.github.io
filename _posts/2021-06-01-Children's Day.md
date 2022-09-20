@@ -1,23 +1,22 @@
 ---
-title: "Sentiment Analysis"
+title: "Children’s Day"
 image: 
   path: /images/picture/H2R-simple.jpg
   thumbnail: /images/picture/H2R-simple.jpg
 categories:
   - Photography
 tags:
-  - Master
-  - Machine Learning
-  - Deep Learning
-  - Sentiment Analysis
-last_modified_at: 2022-09-16T16:19:20-05:00
+  - Lego
+  - Photography
+last_modified_at: 2021-06-01T16:19:20-05:00
 ---
 
-# Sentiment Analysis on APP reviews
+# Children’s Day
 
-the CODE and DATA set are in my github as follows:
+Two Lego sets that I finished during Children’s Day.
 
-<https://github.com/Elroy-T/Sentiment-Analysis/blob/main/BERT_Classifier.ipynb>
+* Wuling Hongguang mini EV(pink)
+* Kawasaki H2R
 
 
 

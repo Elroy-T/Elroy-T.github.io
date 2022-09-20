@@ -18,6 +18,15 @@ Two Lego sets that I finished during Children’s Day.
 * Wuling Hongguang mini EV(pink)
 * Kawasaki H2R
 
+<figure class="align-center">
+  <img src="{{ '/images/mini-EV.jpg' | absolute_url }}" alt="">
+  <figcaption>Wuling Hongguang mini EV(pink)</figcaption>
+</figure> 
+
+<figure class="align-center">
+  <img src="{{ '/images/H2R.jpg' | absolute_url }}" alt="">
+  <figcaption>Kawasaki H2R</figcaption>
+</figure> 
 
 
 

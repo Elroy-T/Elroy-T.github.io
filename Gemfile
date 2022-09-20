@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+gem install jekyll 
 # use local theme gem for testing
 gem "jekyll-theme-so-simple", path: "../"
 

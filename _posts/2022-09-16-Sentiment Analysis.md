@@ -1,10 +1,7 @@
 ---
 title: "Sentiment Analysis"
-image: 
-  path: /images/picture/H2R-simple.jpg
-  thumbnail: /images/picture/H2R-simple.jpg
 categories:
-  - Photography
+  - Master
 tags:
   - Master
   - Machine Learning
@@ -16,4 +13,4 @@ last_modified_at: 2022-09-16T16:19:20-05:00
 
 the CODE documents and DATA set are in my github as follows:
 
-<https://github.com/Elroy-T/Sentiment-Analysis/blob/main/BERT_Classifier.ipynb>
+<https://github.com/Elroy-T/Sentiment-Analysis>

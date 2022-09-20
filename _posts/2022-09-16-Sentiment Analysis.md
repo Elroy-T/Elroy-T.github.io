@@ -14,6 +14,6 @@ last_modified_at: 2022-09-16T16:19:20-05:00
 ---
 # Sentiment Analysis on APP reviews
 
-the CODE and DATA set are in my github as follows:
+the CODE documents and DATA set are in my github as follows:
 
 <https://github.com/Elroy-T/Sentiment-Analysis/blob/main/BERT_Classifier.ipynb>
